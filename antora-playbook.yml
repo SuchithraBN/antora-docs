@@ -19,6 +19,6 @@ runtime:
 
 
 output:
-  dir: ./public
+  dir: ./var/www/html
 
 
