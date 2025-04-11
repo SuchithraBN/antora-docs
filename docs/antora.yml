@@ -1,4 +1,4 @@
-name: docs
+name: antora-docs
 title: My API Document
 version: '1.0'
 start_page: ROOT:index.adoc

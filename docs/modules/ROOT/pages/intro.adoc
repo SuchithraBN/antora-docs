@@ -3,7 +3,7 @@
 
 == Overview
 
-This documentation provides details on the API endpoints and functionality offered by the School teacher creation and get all teacher details.
+This documentation provides details on the API endpoints and functionality offered by the School teacher creation and get all teacher details. 
 
 == Authentication
 
