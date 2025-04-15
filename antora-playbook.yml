@@ -8,6 +8,36 @@ content:
       branches: main   # Adjust branch name if needed
       start_path: docs  # Change if your AsciiDoc files are in a different folderAdjust this based on your folder structure
 
+
+asciidoc:
+  attributes:
+    experimental: true
+    page-editable: false
+    page-fileUri: true
+    page-pagination: true@
+    listing-caption: Listing
+    tabs: tabs
+    tabs-sync-option: ''
+
+
+  extensions:
+    - ./lib/json-config-ui-block-macro.js
+    - ./lib/multirow-table-head-tree-processor.js
+    - ./lib/swagger-ui-block-macro.js
+    - ./lib/tabs-block.js
+    - ./lib/markdown-block.js
+    - asciidoctor-external-callout
+    - '@asciidoctor/tabs'
+
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+      snippet_length: 250
+      index_latest_only: true
+    - '@antora/site-generator-ms'
+    - '@antora/collector-extension'
+
+
 ui:
   bundle:
     url: ./ui-bundle.zip
