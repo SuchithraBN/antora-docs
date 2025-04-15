@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: My API Document</title>
     <link rel="canonical" href="https://suchithrabn.github.io/antora-docs/antora-docs/1.0/create-teacher/teacher-create-copy.html">
-    <meta name="generator" content="Antora 3.1.10">
+    <meta name="generator" content="Antora 3.1.2">
 
 <link rel="stylesheet" title="Default" href="../../../_/css/site.css">
 
@@ -61,6 +61,11 @@
           </div>
         </div>
 
+<div class="navbar-item search hide-for-print">
+  <div id="search-field" class="field">
+    <input id="search-input" type="text" placeholder="Search the docs">
+  </div>
+</div>
 
         <!-- <div class="navbar-item">
           <span class="control">
@@ -137,12 +142,22 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-    <div class="exampleblock">
+    <div id="_tabs_1" class="openblock tabs is-sync is-loading">
 <div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Header Parameter</dt>
-<dd>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_header_parameter" class="tab">
+<p>Header Parameter</p>
+</li>
+<li id="_tabs_1_request" class="tab">
+<p>Request</p>
+</li>
+<li id="_tabs_1_response" class="tab">
+<p>Response</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_header_parameter--panel" class="tabpanel" aria-labelledby="_tabs_1_header_parameter">
 <div class="ulist">
 <ul>
 <li>
@@ -159,16 +174,27 @@
 </li>
 </ul>
 </div>
-</dd>
-<dt class="hdlist1">Request</dt>
-<dd>
+</div>
+<div id="_tabs_1_request--panel" class="tabpanel" aria-labelledby="_tabs_1_request">
+<div class="paragraph">
 <p><strong>URL:</strong> <code>/Teachers/Create</code></p>
-<div class="exampleblock">
+</div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
 <div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Body</dt>
-<dd>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_body" class="tab">
+<p>Body</p>
+</li>
+<li id="_tabs_2_sample_value" class="tab">
+<p>Sample Value</p>
+</li>
+<li id="_tabs_2_field_description" class="tab">
+<p>Field Description</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_body--panel" class="tabpanel" aria-labelledby="_tabs_2_body">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -190,9 +216,8 @@
 }</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">Sample Value</dt>
-<dd>
+</div>
+<div id="_tabs_2_sample_value--panel" class="tabpanel" aria-labelledby="_tabs_2_sample_value">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -214,9 +239,8 @@
 }</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">Field Description</dt>
-<dd>
+</div>
+<div id="_tabs_2_field_description--panel" class="tabpanel" aria-labelledby="_tabs_2_field_description">
 <div class="ulist">
 <ul>
 <li>
@@ -294,20 +318,30 @@
 </li>
 </ul>
 </div>
-</dd>
-</dl>
 </div>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">Response</dt>
-<dd>
-<div class="exampleblock">
+</div>
+<div id="_tabs_1_response--panel" class="tabpanel" aria-labelledby="_tabs_1_response">
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
 <div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Body</dt>
-<dd>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_body" class="tab">
+<p>Body</p>
+</li>
+<li id="_tabs_3_response_success" class="tab">
+<p>Response Success</p>
+</li>
+<li id="_tabs_3_response_failure" class="tab">
+<p>Response Failure</p>
+</li>
+<li id="_tabs_3_field_description" class="tab">
+<p>Field Description</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_body--panel" class="tabpanel" aria-labelledby="_tabs_3_body">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -317,9 +351,8 @@
 }</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">Response Success</dt>
-<dd>
+</div>
+<div id="_tabs_3_response_success--panel" class="tabpanel" aria-labelledby="_tabs_3_response_success">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -347,10 +380,11 @@
 }</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">Response Failure</dt>
-<dd>
+</div>
+<div id="_tabs_3_response_failure--panel" class="tabpanel" aria-labelledby="_tabs_3_response_failure">
+<div class="paragraph">
 <p>In case of errors, the API will respond with an appropriate HTTP status code and a JSON error message.</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -365,9 +399,8 @@
 }</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">Field Description</dt>
-<dd>
+</div>
+<div id="_tabs_3_field_description--panel" class="tabpanel" aria-labelledby="_tabs_3_field_description">
 <div class="ulist">
 <ul>
 <li>
@@ -483,13 +516,9 @@
 </li>
 </ul>
 </div>
-</dd>
-</dl>
 </div>
 </div>
 </div>
-</dd>
-</dl>
 </div>
 </div>
 </div>
@@ -524,6 +553,9 @@
 <script async src="../../../_/js/vendor/component-versions.js"></script>
 <script src="../../../_/js/vendor/custom.js"></script>
 
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="250" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
 
 
   </body>

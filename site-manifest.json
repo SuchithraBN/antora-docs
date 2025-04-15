@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "generated": 1744726286285,
+  "url": "https://suchithrabn.github.io/antora-docs",
+  "components": [
+    {
+      "name": "antora-docs",
+      "title": "My API Document",
+      "latest": "1.0",
+      "versions": [
+        {
+          "version": "1.0",
+          "url": "/antora-docs/1.0/index.html",
+          "pages": [
+            {
+              "module": "ROOT",
+              "path": "all-teacher/request-all-teacher.adoc",
+              "url": "/antora-docs/1.0/all-teacher/request-all-teacher.html"
+            },
+            {
+              "module": "ROOT",
+              "path": "all-teacher/response-all-teacher.adoc",
+              "url": "/antora-docs/1.0/all-teacher/response-all-teacher.html"
+            },
+            {
+              "module": "ROOT",
+              "path": "all-teacher/teacher-all-create-copy.adoc",
+              "url": "/antora-docs/1.0/all-teacher/teacher-all-create-copy.html"
+            },
+            {
+              "module": "ROOT",
+              "path": "all-teacher/teacher-all-create.adoc",
+              "url": "/antora-docs/1.0/all-teacher/teacher-all-create.html",
+              "title": "<code>GET</code> Get All Teacher Information"
+            },
+            {
+              "module": "ROOT",
+              "path": "change-log.adoc",
+              "url": "/antora-docs/1.0/change-log.html",
+              "title": "What’s New in Nymbl Suite ERP"
+            },
+            {
+              "module": "ROOT",
+              "path": "create-teacher/request-teacher.adoc",
+              "url": "/antora-docs/1.0/create-teacher/request-teacher.html"
+            },
+            {
+              "module": "ROOT",
+              "path": "create-teacher/response-teacher.adoc",
+              "url": "/antora-docs/1.0/create-teacher/response-teacher.html"
+            },
+            {
+              "module": "ROOT",
+              "path": "create-teacher/teacher-create-copy.adoc",
+              "url": "/antora-docs/1.0/create-teacher/teacher-create-copy.html"
+            },
+            {
+              "module": "ROOT",
+              "path": "create-teacher/teacher-create.adoc",
+              "url": "/antora-docs/1.0/create-teacher/teacher-create.html",
+              "title": "<code>POST</code> Teacher create"
+            },
+            {
+              "module": "ROOT",
+              "path": "index.adoc",
+              "url": "/antora-docs/1.0/index.html"
+            },
+            {
+              "module": "ROOT",
+              "path": "intro.adoc",
+              "url": "/antora-docs/1.0/intro.html",
+              "title": "Introduction"
+            },
+            {
+              "module": "ROOT",
+              "path": "new-file.adoc",
+              "url": "/antora-docs/1.0/new-file.html",
+              "title": "Page Title"
+            },
+            {
+              "module": "ROOT",
+              "path": "test.adoc",
+              "url": "/antora-docs/1.0/test.html",
+              "title": "<code>GET</code> Invoice document status"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
