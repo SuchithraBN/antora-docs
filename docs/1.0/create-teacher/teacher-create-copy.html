@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: My API Document</title>
-    <link rel="canonical" href="https://suchithrabn.github.io/antora-docs/antora-docs/1.0/create-teacher/request-teacher.html">
+    <link rel="canonical" href="https://suchithrabn.github.io/antora-docs/docs/1.0/create-teacher/teacher-create-copy.html">
     <meta name="generator" content="Antora 3.1.2">
 
 <link rel="stylesheet" title="Default" href="../../../_/css/site.css">
@@ -54,11 +54,6 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">APIs</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="../../../home/current/index.html">Nymbl Suite API</a>
-            <a class="navbar-item" href="../../../shopify-api/current/index.html">Shopify Integration API</a>
-          </div>
         </div>
 
 <div class="navbar-item search hide-for-print">
@@ -89,12 +84,13 @@
       </div>
   <span></span>
   <span></span>
+    <a href="../index.html" class="home-link"></a>
   <nav class="breadcrumbs" aria-label="breadcrumbs">
 </nav>
 </div>
 
 <div class="body">
-<div class="nav-container" data-component="antora-docs" data-version="1.0">
+<div class="nav-container" data-component="docs" data-version="1.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -146,18 +142,55 @@
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_1_body" class="tab">
+<li id="_tabs_1_header_parameter" class="tab">
+<p>Header Parameter</p>
+</li>
+<li id="_tabs_1_request" class="tab">
+<p>Request</p>
+</li>
+<li id="_tabs_1_response" class="tab">
+<p>Response</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_header_parameter--panel" class="tabpanel" aria-labelledby="_tabs_1_header_parameter">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SecretKey</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>API Secret Key based on API settings</p>
+</div>
+</li>
+<li>
+<p><strong>SchoolId</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>School Id For API based on API settings</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="_tabs_1_request--panel" class="tabpanel" aria-labelledby="_tabs_1_request">
+<div class="paragraph">
+<p><strong>URL:</strong> <code>/Teachers/Create</code></p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_body" class="tab">
 <p>Body</p>
 </li>
-<li id="_tabs_1_sample_value" class="tab">
+<li id="_tabs_2_sample_value" class="tab">
 <p>Sample Value</p>
 </li>
-<li id="_tabs_1_field_description" class="tab">
+<li id="_tabs_2_field_description" class="tab">
 <p>Field Description</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_1_body--panel" class="tabpanel" aria-labelledby="_tabs_1_body">
+<div id="_tabs_2_body--panel" class="tabpanel" aria-labelledby="_tabs_2_body">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -180,7 +213,7 @@
 </div>
 </div>
 </div>
-<div id="_tabs_1_sample_value--panel" class="tabpanel" aria-labelledby="_tabs_1_sample_value">
+<div id="_tabs_2_sample_value--panel" class="tabpanel" aria-labelledby="_tabs_2_sample_value">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -203,7 +236,7 @@
 </div>
 </div>
 </div>
-<div id="_tabs_1_field_description--panel" class="tabpanel" aria-labelledby="_tabs_1_field_description">
+<div id="_tabs_2_field_description--panel" class="tabpanel" aria-labelledby="_tabs_2_field_description">
 <div class="ulist">
 <ul>
 <li>
@@ -280,6 +313,207 @@
 </div>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_1_response--panel" class="tabpanel" aria-labelledby="_tabs_1_response">
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_body" class="tab">
+<p>Body</p>
+</li>
+<li id="_tabs_3_response_success" class="tab">
+<p>Response Success</p>
+</li>
+<li id="_tabs_3_response_failure" class="tab">
+<p>Response Failure</p>
+</li>
+<li id="_tabs_3_field_description" class="tab">
+<p>Field Description</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_body--panel" class="tabpanel" aria-labelledby="_tabs_3_body">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "IsSuccess": true,
+  "Data": "string",
+  "Errors": "string"
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_response_success--panel" class="tabpanel" aria-labelledby="_tabs_3_response_success">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "IsSuccess": true,
+    "Data": [
+        {
+            "id": 200,
+            "firstName": "Kumar",
+            "lastName": "Babu",
+            "age": 35,
+            "email": "baule@xyz.com",
+            "class": 8,
+            "students": [
+                {
+                    "studentid": 5,
+                    "firstName": "mari",
+                    "lastName": "alex",
+                    "age": 21,
+                    "gender": "male"
+                }
+            ]
+        }
+    ],
+    "Errors": null
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_response_failure--panel" class="tabpanel" aria-labelledby="_tabs_3_response_failure">
+<div class="paragraph">
+<p>In case of errors, the API will respond with an appropriate HTTP status code and a JSON error message.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "IsSuccess": false,
+  "Data": null,
+  "Errors": [
+    {
+      "Code": "INV0001",
+      "Message": "Invalid Student ID"
+     }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_field_description--panel" class="tabpanel" aria-labelledby="_tabs_3_field_description">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>IsSuccess</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>True/False</p>
+</div>
+<div class="paragraph">
+<p>If the value is <strong>True</strong> then the <strong>Data</strong> section will receive data from the external system. Error section will be <code>NULL</code>.</p>
+</div>
+<div class="paragraph">
+<p>If the value is <strong>False</strong>, then the <strong>Data</strong> section will be null. The <strong>Error</strong> section will be the list of validation based on which the teacher creation was failed.</p>
+</div>
+</li>
+<li>
+<p><strong>Data</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ID</strong>       <code>int</code></p>
+<div class="paragraph">
+<p>Teacher ID</p>
+</div>
+</li>
+<li>
+<p><strong>firstName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Teacher&#8217;s first name</p>
+</div>
+</li>
+<li>
+<p><strong>lastName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Teacher&#8217;s last name</p>
+</div>
+</li>
+<li>
+<p><strong>age</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Age of the teacher</p>
+</div>
+</li>
+<li>
+<p><strong>email</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Email address of the teacher</p>
+</div>
+</li>
+<li>
+<p><strong>class</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Class of the teacher</p>
+</div>
+</li>
+<li>
+<p><strong>students:</strong> Students information</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>studentid</strong>       <code>int</code></p>
+<div class="paragraph">
+<p>Students unique ID</p>
+</div>
+</li>
+<li>
+<p><strong>firstName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>First name of the student</p>
+</div>
+</li>
+<li>
+<p><strong>lastName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Last name of the student</p>
+</div>
+</li>
+<li>
+<p><strong>age</strong>       <code>int</code></p>
+<div class="paragraph">
+<p>Age of the student</p>
+</div>
+</li>
+<li>
+<p><strong>gender</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Gender of the student</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Error</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Code</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Displays the error code</p>
+</div>
+</li>
+<li>
+<p><strong>Message</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Displays the error message</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

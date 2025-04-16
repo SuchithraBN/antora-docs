@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: My API Document</title>
-    <link rel="canonical" href="https://suchithrabn.github.io/antora-docs/antora-docs/1.0/all-teacher/teacher-all-create-copy.html">
+    <title>POST Teacher create :: My API Document</title>
+    <link rel="canonical" href="https://suchithrabn.github.io/antora-docs/docs/1.0/create-teacher/teacher-create.html">
+    <link rel="prev" href="../all-teacher/teacher-all-create.html">
     <meta name="generator" content="Antora 3.1.2">
 
 <link rel="stylesheet" title="Default" href="../../../_/css/site.css">
@@ -54,11 +55,6 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">APIs</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="../../../home/current/index.html">Nymbl Suite API</a>
-            <a class="navbar-item" href="../../../shopify-api/current/index.html">Shopify Integration API</a>
-          </div>
         </div>
 
 <div class="navbar-item search hide-for-print">
@@ -89,12 +85,17 @@
       </div>
   <span></span>
   <span></span>
+    <a href="../index.html" class="home-link"></a>
   <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">My API Document</a></li>
+    <li><a href="teacher-create.html"><code>POST</code> Teacher create</a></li>
+  </ul>
 </nav>
 </div>
 
 <div class="body">
-<div class="nav-container" data-component="antora-docs" data-version="1.0">
+<div class="nav-container" data-component="docs" data-version="1.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -107,10 +108,10 @@
     <a class="nav-link" href="../intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="teacher-all-create.html"><code>GET</code> Get All Teacher Information</a>
+    <a class="nav-link" href="../all-teacher/teacher-all-create.html"><code>GET</code> Get All Teacher Information</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../create-teacher/teacher-create.html"><code>POST</code> Teacher create</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="teacher-create.html"><code>POST</code> Teacher create</a>
   </li>
 </ul>
   </li>
@@ -142,7 +143,19 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-    <div id="_tabs_1" class="openblock tabs is-sync is-loading">
+      <h1 class="page"><code>POST</code> Teacher create</h1>
+    <div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This API is to create teacher with allocated student details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_api_details"><a class="anchor" href="#_api_details"></a>API details</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
@@ -161,9 +174,15 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>TeacherId</strong>       <code>string</code></p>
+<p><strong>SecretKey</strong>       <code>string</code></p>
 <div class="paragraph">
-<p>Teacher Id For API based on API settings</p>
+<p>API Secret Key based on API settings</p>
+</div>
+</li>
+<li>
+<p><strong>SchoolId</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>School Id For API based on API settings</p>
 </div>
 </li>
 </ul>
@@ -171,7 +190,7 @@
 </div>
 <div id="_tabs_1_request--panel" class="tabpanel" aria-labelledby="_tabs_1_request">
 <div class="paragraph">
-<p><strong>URL:</strong> <code>/Teachers/ID</code></p>
+<p><strong>URL:</strong> <code>/Teachers/Create</code></p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -180,14 +199,58 @@
 <li id="_tabs_2_body" class="tab">
 <p>Body</p>
 </li>
+<li id="_tabs_2_sample_value" class="tab">
+<p>Sample Value</p>
+</li>
 <li id="_tabs_2_field_description" class="tab">
 <p>Field Description</p>
 </li>
 </ul>
 </div>
 <div id="_tabs_2_body--panel" class="tabpanel" aria-labelledby="_tabs_2_body">
-<div class="paragraph">
-<p><code>Teachers/ID</code></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "id": 0,
+  "firstName": "string",
+  "lastName": "string",
+  "age": 0,
+  "email": "string",
+  "class": 0,
+  "students": [
+    {
+      "studentid": 0,
+      "firstName": "string",
+      "lastName": "string",
+      "age": 0,
+      "gender": "string"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_sample_value--panel" class="tabpanel" aria-labelledby="_tabs_2_sample_value">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "id": 204,
+  "firstName": "Kumar",
+  "lastName": "Babu",
+  "age": 35,
+  "email": "baule@xyz.com",
+  "class": 8,
+  "students": [
+    {
+      "studentid": 5,
+      "firstName": "mari",
+      "lastName": "alex",
+      "age": 21,
+      "gender": "male"
+    }
+  ]
+}</code></pre>
+</div>
 </div>
 </div>
 <div id="_tabs_2_field_description--panel" class="tabpanel" aria-labelledby="_tabs_2_field_description">
@@ -197,6 +260,73 @@
 <p><strong>ID</strong>       <code>int</code></p>
 <div class="paragraph">
 <p>Teacher ID</p>
+</div>
+</li>
+<li>
+<p><strong>firstName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Teacher&#8217;s first name</p>
+</div>
+</li>
+<li>
+<p><strong>lastName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Teacher&#8217;s last name</p>
+</div>
+</li>
+<li>
+<p><strong>age</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Age of the teacher</p>
+</div>
+</li>
+<li>
+<p><strong>email</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Email address of the teacher</p>
+</div>
+</li>
+<li>
+<p><strong>class</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Class of the teacher</p>
+</div>
+</li>
+<li>
+<p><strong>students:</strong> Students information</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>studentid</strong>       <code>int</code></p>
+<div class="paragraph">
+<p>Students unique ID</p>
+</div>
+</li>
+<li>
+<p><strong>firstName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>First name of the student</p>
+</div>
+</li>
+<li>
+<p><strong>lastName</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Last name of the student</p>
+</div>
+</li>
+<li>
+<p><strong>age</strong>       <code>int</code></p>
+<div class="paragraph">
+<p>Age of the student</p>
+</div>
+</li>
+<li>
+<p><strong>gender</strong>       <code>string</code></p>
+<div class="paragraph">
+<p>Gender of the student</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -249,18 +379,11 @@
             "email": "baule@xyz.com",
             "class": 8,
             "students": [
-               {
+                {
                     "studentid": 5,
                     "firstName": "mari",
                     "lastName": "alex",
                     "age": 21,
-                    "gender": "male"
-                },
-                {
-                    "studentid": 6,
-                    "firstName": "karan",
-                    "lastName": "Rajan",
-                    "age": 23,
                     "gender": "male"
                 }
             ]
@@ -282,8 +405,8 @@
   "Data": null,
   "Errors": [
     {
-      "Code": "INV0002",
-      "Message": "Invalid Teacher ID"
+      "Code": "INV0001",
+      "Message": "Invalid Student ID"
      }
   ]
 }</code></pre>
@@ -412,7 +535,37 @@
 </div>
 </div>
 </div>
-  </article>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_error_codes_and_messages"><a class="anchor" href="#_error_codes_and_messages"></a>Error Codes and Messages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use your error code or message to troubleshoot problems with the API.</p>
+</div>
+<table class="tableblock frame-none grid-rows stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error Code:</strong> <code>INV0001</code></p>
+<p class="tableblock"><strong>Message:</strong> Invalid Student ID</p>
+<p class="tableblock"><strong>Problem:</strong> Student ID does not exist</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error Code:</strong> <code>INV0002</code></p>
+<p class="tableblock"><strong>Message:</strong> Invalid Teacher ID</p>
+<p class="tableblock"><strong>Problem:</strong> Teacher ID does not exist</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+  <nav class="pagination">
+  <span class="prev"><a href="../all-teacher/teacher-all-create.html"><code>GET</code> Get All Teacher Information</a></span>
+</nav>
+</article>
   </div>
 </main>
 </div>
