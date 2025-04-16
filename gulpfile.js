@@ -1,25 +1,38 @@
-const gulp = require('gulp');
-const connect = require('gulp-connect');
+'use strict'
 
-// Task to serve files and enable live reload
-gulp.task('serve', function () {
-    connect.server({
-        root: 'dist', // Make sure this folder exists and contains an index.html
-        livereload: true,
-        port: 8080
-    });
-});
+const connect = require('gulp-connect')
+const fs = require('fs')
+const generator = require('@antora/site-generator')
+const { reload: livereload } = process.env.LIVERELOAD === 'true' ? require('gulp-connect') : {}
+const { series, src, watch } = require('gulp')
+const yaml = require('js-yaml')
 
-// Task to reload on changes
-gulp.task('reload', function () {
-    return gulp.src('dist/**/*')
-        .pipe(connect.reload());
-});
+const playbookFilename = 'local.yml'
+const playbook = yaml.load(fs.readFileSync(playbookFilename, 'utf8'))
+const outputDir = (playbook.output || {}).dir || './build/site'
+const serverConfig = { name: 'Preview Site', livereload, port: 8080, root: outputDir }
+const antoraArgs = ['--playbook', playbookFilename]
+const watchPatterns = playbook.content.sources.filter((source) => !source.url.includes(':')).reduce((accum, source) => {
+  accum.push(`${source.url}/${source.start_path ? source.start_path + '/' : ''}antora.yml`)
+  accum.push(`${source.url}/${source.start_path ? source.start_path + '/' : ''}**/*.adoc`)
+return accum
+}, [])
 
-// Watch for changes and reload
-gulp.task('watch', function () {
-    gulp.watch('src/**/*', gulp.series('reload')); // Change 'src' based on your folder structure
-});
+function generate (done) {
+  generator(antoraArgs, process.env)
+    .then(() => done())
+    .catch((err) => {
+      console.log(err)
+      done()
+    })
+}
 
-// Default task
-gulp.task('default', gulp.parallel('serve', 'watch'));
+function serve (done) {
+  connect.server(serverConfig, function () {
+    this.server.on('close', done)
+    watch(watchPatterns, generate)
+    if (livereload) watch(this.root).on('change', (filepath) => src(filepath, { read: false }).pipe(livereload()))
+  })
+}
+
+module.exports = { serve, generate, default: series(generate, serve) }

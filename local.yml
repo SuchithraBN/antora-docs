@@ -8,6 +8,8 @@ content:
   sources:
     - url: .
       branches: main
+      start_paths:
+        - docs
 
 ui:
   bundle:

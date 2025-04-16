@@ -1,7 +1,7 @@
-name: antora-docs
+name: docs
 title: My API Document
 version: '1.0'
-start_page: ROOT:index.adoc
+start_page: index.adoc
 
 asciidoc:
   attributes:
